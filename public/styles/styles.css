@@ -735,7 +735,7 @@ button {
   margin: 0 auto;
   margin-top: 6rem;
   padding-bottom: 0;
-  background: url(../images/image_bg_reservation1.png) no-repeat 0% -20%, url(../images/image_bg_reservation2.png) no-repeat 10% 80%, url(../images/image_bg_reservation3.png) no-repeat 100% 300%;
+  background: url(../images/image_bg_reservation1.png) no-repeat 0% -20%, url(../images/image_bg_reservation2.png) no-repeat 10% 80%, url(../images/image_bg_reservation3.png) no-repeat 100% 280%;
   min-height: 650px; }
   .reservation-content {
     display: -webkit-box;
