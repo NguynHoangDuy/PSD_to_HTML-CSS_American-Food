@@ -1,0 +1,223 @@
+.header{
+    background: url(../images/image_bg_header.png) no-repeat center / cover;
+    max-height: 82.5rem;
+    padding-top: 5.2rem;
+    &-top{
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        z-index: 10;
+    }
+    &-logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-toggle{
+        display: none;
+        cursor: pointer;
+    }
+    &-delivery_contact{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &-content{
+            font-family: $third-font;
+            color: $primary-color;
+            padding-left: 1rem;
+            font-weight: bold;
+            font-size: 1.667rem;
+        }
+    }
+
+    &-menu{
+        padding-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 20.83px;
+        &_item{
+            margin-left: 4.5rem;
+        }
+        &_link{
+            color: $primary-color;
+            letter-spacing: 0.5rem;
+        }
+    }
+    &-bottom{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-shrink: 0;
+    }
+    &-content{
+        width: 45%;
+    }
+    &-title{
+        font-size: 23.65px;
+        border: 2px $primary-color dashed;
+        margin-top: 12.5rem;
+        padding: 15px 20px;
+        display: inline-block;
+    }
+    &-desc{
+        display: inline-block;
+        margin-top: 12.5rem;
+        font-size: 11.43rem;
+        font-family: $secondary-font;
+        color: $primary-color;
+        margin-top: 2.5rem;
+        text-transform: uppercase;
+        text-shadow: 7px 5px 0px #fee8bc;
+    }
+    &-time{
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 5.649rem;
+        font-family: $secondary-font;
+        color: $primary-color;
+        margin-top: 2.5rem;
+        text-shadow: 7px 5px 0px #fee8bc;
+    }
+    &-banner{
+        transform: translateY(-10%);
+    }
+    @media screen and(max-width: 1279px) {
+        &-bottom{
+            padding-bottom: 4rem;
+        }
+        &-desc{
+            font-size: 90px;
+        }
+        &-time{
+            font-size: 50px;
+        }
+    }
+
+    @media screen and(max-width: 1023px) {
+        
+        &-logo{
+            width: 20rem;
+        }
+        &-bottom{
+            padding-bottom: 3rem;
+        }
+        &-title{
+            font-size: 15px;
+            margin-top: 9rem;
+        }
+        &-desc{
+            font-size: 60px;
+        }
+        &-time{
+            font-size: 25px;
+        }
+        &-menu{
+            font-size: 20px;
+            &_item{
+                margin-left: 4.5rem;
+            }
+            &_link{
+                letter-spacing: 0.3rem;
+            }
+        }
+    }
+    @media screen and(max-width: 767px) {
+        max-height: unset;
+        &-logo{
+            width: 100%;
+            &_image{
+                width: 25rem;
+            }
+        }
+        &-toggle{
+            display: block;
+            font-size: 3rem;
+            color: $primary-color;
+        }
+        &-delivery_contact{
+            margin-top: 2rem;
+            &-content{
+                font-size: 2rem;
+            }
+        }
+        &-menu{
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: white;
+            width: 300px;
+            display: block;
+            z-index: 10;
+            padding: 2rem 2.5rem;
+            transform: translateX(100%);
+            transition: transform 0.25s linear;
+            text-align: center;
+            &.is-expand{
+                transform: translateX(0);
+            }
+
+            &_item{
+                margin: 3rem 0 0;
+            }
+        }
+        &-top{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-bottom{
+            flex-direction: column-reverse;
+        }
+        &-banner{
+            transform: translateY(0);
+        }
+        &-content{
+            margin:  0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 4rem;
+        }
+        &-title{
+            width: max-content;
+            margin-top: 0;
+        }
+        &-desc{
+            font-size: 50px;
+        }
+        &-time{
+            font-size: 25px;
+        }
+    }
+    @media screen and(max-width: 454px) {
+        &-menu{
+            width: 200px;
+        }
+        &-logo_image{
+            width: 15rem;
+        }
+        &-toggle{
+            font-size: 2rem;
+        }
+        &-delivery_contact{
+            flex-direction: column;
+            &-content{
+                margin-top: 1rem;
+                font-size: 1.3rem;
+            }
+        }
+        &-title{
+            font-size: 13px;
+            padding: 10px 15px;
+        }
+        &-desc{
+            font-size: 40px;
+        }
+        &-time{
+            font-size: 20px;
+        }
+    }
+}

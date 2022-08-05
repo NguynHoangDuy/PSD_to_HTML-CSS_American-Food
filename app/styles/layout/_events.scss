@@ -1,0 +1,189 @@
+.events{
+    // max-width: 130rem;
+    margin: 0 auto;
+    &-list{
+        // margin: 0 auto;
+        box-shadow: 2.5rem 2.5rem 2rem #d9d9d9;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        // column-gap: 2.5rem;
+        grid-template-columns: unset;
+        overflow-x: hidden;
+
+        transition: transform 0.5s linear;
+        // transform: translateX(-100%);
+    }
+
+    &-item{
+        padding: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.25s linear;
+        // transform: translateX(-200%);
+    }
+    &-content{
+        margin-top: 4rem;
+        margin-left: 2.5rem;
+        margin-bottom: 3rem;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-name{
+        color: $text-color;
+        font-size: 29.17px;
+        margin-bottom: 1rem;  
+    }
+
+    &-title{
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        font-size: 41.67px;
+        color: $primary-color;
+        margin-bottom: 4rem;
+    }
+    &-desc{
+        font-family: $third-font;
+        color: $text-color;
+        font-size: 19.87px;
+        line-height: 1.4;
+    }
+    &-slide{
+        display: flex;
+        position: absolute;
+        bottom: 10%;
+        left: 5rem;
+        z-index: 10;
+    }
+    &-raido{
+        &_item{
+            margin-right: 8px;
+        }
+        &_btn{
+            display: none;
+
+            &:checked + .events-raido_label::before{
+                background-color: $third-color;
+            } 
+
+        }
+        &_label{
+            position: relative;
+            margin-right: 1.2rem;
+            cursor: pointer;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                background-color: #dcdcdc;
+            }
+        }
+    }
+    &-img{
+        width: 48%;
+    }
+
+    @media screen and(max-width: 1279px) {
+        &-content{
+            margin-top: 2rem;
+            width: 45%;
+        }
+        &-img{
+            width: 50%;
+        }
+        &-name{
+            font-size: 27px;
+        }
+    
+        &-title{
+            font-size: 30px;
+            margin-bottom: 2rem;
+        }
+        &-desc{
+            font-size: 16.87px;
+            line-height: 1.4;
+            margin-bottom: 3rem;
+        }
+    }
+
+    @media screen and(max-width: 911px) {
+        &-item{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &-content{
+            text-align: center;
+            align-items: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        &-img{
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+        &-name{
+            font-size: 30px;
+        }
+    
+        &-title{
+            font-size: 35px;
+            margin-bottom: 2rem;
+        }
+        &-desc{
+            font-size: 20px;
+        }
+        &-list{
+            padding-bottom: 4rem;
+        }
+        &-slide{
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+    }
+
+    @media screen and(max-width: 767px) {
+        
+        &-list{
+            max-width: unset;
+            box-shadow: none;
+        }
+    }
+    @media screen and(max-width: 621px) {
+        &-desc{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            max-width: 100%;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    }
+    @media screen and(max-width: 507px) {
+        &-title{
+            font-size: 25px;
+        }
+        &-img{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &-list{
+            padding-bottom: 2rem;
+        }
+    }
+}

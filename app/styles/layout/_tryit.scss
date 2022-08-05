@@ -1,0 +1,86 @@
+.tryit{
+    margin: 7.5rem 5rem 6rem;
+
+    &-list{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 4rem;
+        grid-template-areas: 
+        "h1 h2"
+        "h1 h3";
+    }
+    &-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    &-item:first-child{
+        grid-area: h1;
+    }
+    &-item:last-child{
+        grid-area: h3;
+    }
+    &-item:nth-child(2){
+        grid-area: h2;
+    }
+
+    &-item{
+        position: relative;
+        border-radius: 1rem;
+    }
+
+    &-content{
+        position: absolute;
+        top: 2rem;
+        left: 2.5rem;
+        color: $secondary-color;
+    }
+
+    &-title{
+        font-size: 2.5rem;
+        font-weight: thin;
+    }
+    &-desc{
+        font-size: 4.167rem;
+    }
+    @media screen and(max-width: 1279px) {
+        &-content{
+            top: 1.2rem;
+            left: 2;
+        }
+        &-title{
+            font-size: 1.5rem;
+        }
+        &-desc{
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and(max-width: 767px) {
+        margin-top: 5rem ;
+        &-list{
+            display: block;
+        }
+
+        &-item{
+            margin-top: 2rem;
+        }
+    }
+
+    @media screen and(max-width: 454px) {
+        margin-left: 0;
+        margin-right: 0;
+        &-content{
+            top: 1rem;
+            left: 1rem;
+        }
+        &-title{
+            font-size: 1.2rem;
+        }
+        &-desc{
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.footer{
+    max-width: 1440px;
+    margin: 0 auto;
+    background: url(../images/image_bg_footer.png) no-repeat center / cover;
+    padding-top: 9rem;
+    color: $secondary-color;
+    margin-bottom: 6rem;
+
+    &-logo{
+        margin-bottom: 4rem;
+    }
+    
+    &-content{
+        margin-bottom: 14rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &-desc{
+        line-height: 1.4;
+        width: 45%;
+        font-family: $third-font;
+        font-size: 16.67px;
+    }
+
+    &-contact{
+        width: 35%;
+        &_item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        &_icon{
+            margin-right: 2.5rem;
+        }
+        &_desc{
+            font-family: $third-font;
+            font-size: 20.87px;
+        }
+    }
+    
+    &-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    &-copyright{
+        font-size: 16.67px;
+    }
+    
+    &-social{
+        display: flex;
+        &_icon{
+            padding-left: 1rem;
+        }
+    }
+    
+    @media screen and(max-width: 1023px) {
+        &-logo{
+            width: 35rem;
+        }
+        &-contact{
+            width: 40%;
+            &_item{
+                margin-bottom: 2rem;
+            }
+            &_desc{
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media screen and(max-width: 767px) {
+        &-logo{
+            margin: 0 auto 4rem ;
+            width: 35rem;
+        }
+        &-content{
+            flex-direction: column;
+        }
+        &-desc{
+            text-align: center;
+            width: 100%;
+            margin-bottom: 3rem;
+            font-size: 18px;
+        }
+        &-contact{
+            width: 100%;
+            margin-top: 3rem;
+            &_item{
+                margin-bottom: 2rem;
+            }
+            &_desc{
+                font-size: 16px;
+            }
+        }
+    }
+    @media screen and(max-width: 535px) {
+        &-logo{
+            width: 30rem;
+        }
+        &-bottom{
+            flex-direction: column-reverse;
+        }
+        &-contact{
+            margin-bottom: 0;
+        }
+        &-social{
+            margin-bottom: 2rem;
+        }
+        &-content{
+            margin-bottom: 7rem;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.reservation{
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding-bottom: 0;
+    // margin-bottom: 10rem;
+    background: url(../images/image_bg_reservation1.png) no-repeat 0% -20% , 
+    url(../images/image_bg_reservation2.png) no-repeat 10% 80%,
+    url(../images/image_bg_reservation3.png) no-repeat 100% 300%;
+    min-height: 650px;
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &-title{
+        font-size: 29.17px;
+        color: $primary-color;
+        margin-top: 7rem;
+    }
+    &-desc{
+        color: $primary-color;
+        font-size: 5rem;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        margin-top: 2rem;
+        margin-bottom: 7rem;
+    }
+    &-form{
+        width: 60%;
+    }
+    &-form_group{
+        display: flex;
+        margin-bottom: 2.5rem;
+        justify-content: space-between;
+    }
+
+    &-input{
+        width: calc(50% - 2.5rem);
+        height: 6.5rem;
+        padding: 2rem;
+        border: 1px solid #bebebe;
+        border-radius: 5px;
+        font-size: 20.87px;
+        &::placeholder {
+            font-family: $primary-font;
+          }
+    }
+    &-btn{
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        color: $secondary-color;
+        background-color: $button-color;
+        font-size: 20.83px;
+    }
+
+    @media screen and (max-width: 1279px) {
+        background: unset;
+        &-form{
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        &-form{
+            width: 90%;
+        }
+
+        &-desc{
+            font-size: 35px;
+        }
+        &-input{
+            font-size: 18px;
+            &::placeholder{
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-top: unset;
+        margin-bottom: 6rem;
+        &-form{
+            width: 90%;
+        }
+        &-form_group{
+            flex-direction: column;
+        }
+
+        &-desc{
+            font-size: 35px;
+        }
+        &-input{
+            width: 100%;
+            font-size: 18px;
+            &::placeholder{
+                font-size: 18px;
+            }
+            &:not(:last-child){
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+    @media screen and (max-width: 436px) {
+        &-title{
+            font-size: 20px;
+        }
+        &-desc{
+            font-size: 22px;
+        }
+        &-input{
+            font-size: 14px;
+            &::placeholder{
+                font-size: 14px;
+            }
+        }
+    }
+}
